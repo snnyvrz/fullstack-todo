@@ -23,6 +23,12 @@ services:
       - db
     networks:
       - default
+    environment:
+      ACCESS_TOKEN_EXPIRY: ${ACCESS_TOKEN_EXPIRY}
+      REFRESH_TOKEN_EXPIRY: ${REFRESH_TOKEN_EXPIRY}
+      SECRET_KEY: ${SECRET_KEY}
+      DB_URL: ${DB_URL}
+      TEST_DB_URL: ${TEST_DB_URL}
 
 networks:
   default:
